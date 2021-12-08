@@ -2,7 +2,7 @@
 using System;
 using System.IO;
 
-namespace IronPDFExample
+namespace IronPDFExample.ConsoleApp
 {
     public class Program
     {
