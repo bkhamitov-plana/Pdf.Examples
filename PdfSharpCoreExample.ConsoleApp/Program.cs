@@ -1,6 +1,7 @@
 ﻿using PdfSharpCore.Drawing;
 using PdfSharpCore.Drawing.Layout;
 using PdfSharpCore.Pdf;
+using PdfSharpCore.Pdf.Security;
 using System.Collections.Generic;
 using System.IO;
 
@@ -177,6 +178,26 @@ namespace PdfSharpCoreExample.ConsoleApp
             //        new XRect(marginLeft, marginTop + dist_Y, el1_width, el_height),
             //        format);
             //}
+
+            PdfSecuritySettings securitySettings = doc.SecuritySettings;
+
+            // Setting one of the passwords automatically sets the security level to
+            // PdfDocumentSecurityLevel.Encrypted128Bit.
+            securitySettings.UserPassword = "user";
+            securitySettings.OwnerPassword = "owner";
+            // Don't use 40 bit encryption unless needed for compatibility
+            //securitySettings.DocumentSecurityLevel = PdfDocumentSecurityLevel.Encrypted40Bit;
+
+
+            // Restrict some rights.
+            securitySettings.PermitAccessibilityExtractContent = false;
+            securitySettings.PermitAnnotations = false;
+            securitySettings.PermitAssembleDocument = false;
+            securitySettings.PermitExtractContent = false;
+            securitySettings.PermitFormsFill = true;
+            securitySettings.PermitFullQualityPrint = false;
+            securitySettings.PermitModifyDocument = true;
+            securitySettings.PermitPrint = false;
 
             string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
             var outputFilename = Path.Combine(path, "output", "test1.pdf");
