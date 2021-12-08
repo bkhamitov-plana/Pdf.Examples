@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronPDFExample.ConsoleApp", "IronPDFExample.ConsoleApp\IronPDFExample.ConsoleApp.csproj", "{8D955302-C693-4D10-A57C-373AAB68F150}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronPDFExample.Mvc", "IronPDFExample.Mvc\IronPDFExample.Mvc.csproj", "{794B1470-F865-4659-A55F-2A39F2C7AF61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronPDFExample.Mvc", "IronPDFExample.Mvc\IronPDFExample.Mvc.csproj", "{794B1470-F865-4659-A55F-2A39F2C7AF61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfSharpCoreExample.ConsoleApp", "PdfSharpCoreExample.ConsoleApp\PdfSharpCoreExample.ConsoleApp.csproj", "{DB266552-DF31-4991-906C-8216106E5BA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{794B1470-F865-4659-A55F-2A39F2C7AF61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{794B1470-F865-4659-A55F-2A39F2C7AF61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{794B1470-F865-4659-A55F-2A39F2C7AF61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB266552-DF31-4991-906C-8216106E5BA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB266552-DF31-4991-906C-8216106E5BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB266552-DF31-4991-906C-8216106E5BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB266552-DF31-4991-906C-8216106E5BA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
