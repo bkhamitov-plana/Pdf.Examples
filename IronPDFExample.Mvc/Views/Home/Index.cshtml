@@ -1,0 +1,68 @@
+﻿@model List<IronPDFExample.Mvc.Models.Person>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<h1>Table</h1>
+<table>
+    <tr>
+        <th>№</th>
+        <th>LastName</th>
+        <th>FirstName</th>
+        <th>MiddleName</th>
+        <th>Phone number</th>
+    </tr>
+    @using (Html.BeginForm())
+    {
+        @foreach (var item in Model)
+        {
+        <tr>
+            <th>@Html.DisplayFor(modelItem => item.Id)</th>
+            <th>@Html.DisplayFor(modelItem => item.LastName)</th>
+            <th>@Html.DisplayFor(modelItem => item.FirstName)</th>
+            <th>@Html.DisplayFor(modelItem => item.Id)</th>
+            <th>@Html.DisplayFor(modelItem => item.PhoneNumber)</th>
+        </tr>
+        }
+    }
+    <tr>
+        <th>1</th>
+        <th>Simple LastName</th>
+        <th>Simple FirstName</th>
+        <th>Simple MiddleName</th>
+        <th>Simple Phone number</th>
+    </tr>
+    <tr>
+        <th>2</th>
+        <th>Simple LastName</th>
+        <th>Simple FirstName</th>
+        <th>Simple MiddleName</th>
+        <th>Simple Phone number</th>
+    </tr>
+    <tr>
+        <th>3</th>
+        <th>Simple LastName</th>
+        <th>Simple FirstName</th>
+        <th>Simple MiddleName</th>
+        <th>Simple Phone number</th>
+    </tr>
+</table>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronPDFExample", "IronPDFExample\IronPDFExample.csproj", "{8D955302-C693-4D10-A57C-373AAB68F150}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronPDFExample.Mvc", "IronPDFExample.Mvc\IronPDFExample.Mvc.csproj", "{794B1470-F865-4659-A55F-2A39F2C7AF61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D955302-C693-4D10-A57C-373AAB68F150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D955302-C693-4D10-A57C-373AAB68F150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D955302-C693-4D10-A57C-373AAB68F150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D955302-C693-4D10-A57C-373AAB68F150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{794B1470-F865-4659-A55F-2A39F2C7AF61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{794B1470-F865-4659-A55F-2A39F2C7AF61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{794B1470-F865-4659-A55F-2A39F2C7AF61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{794B1470-F865-4659-A55F-2A39F2C7AF61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {710149B2-A20A-4A19-9FA4-39CCF57C506D}
+	EndGlobalSection
+EndGlobal
