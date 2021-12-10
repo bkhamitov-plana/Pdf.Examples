@@ -1,9 +1,11 @@
-﻿using PdfSharpCore.Drawing;
+﻿using PdfSharpCore;
+using PdfSharpCore.Drawing;
 using PdfSharpCore.Drawing.Layout;
 using PdfSharpCore.Pdf;
 using PdfSharpCore.Pdf.Security;
 using System.Collections.Generic;
 using System.IO;
+using TheArtOfDev.HtmlRenderer.PdfSharp;
 
 namespace PdfSharpCoreExample.ConsoleApp
 {
@@ -12,6 +14,24 @@ namespace PdfSharpCoreExample.ConsoleApp
 
         public static void Main(string[] args)
         {
+            CreatePdf();
+            CreatePdfFromHtml();
+        }
+
+        public static void CreatePdfFromHtml()
+        {
+            var document = new PdfDocument();
+            var html = "<html><body style='color:green'><h1>PMKJ</h1></body></html>";
+            PdfGenerator.AddPdfPages(document, html, PageSize.A4);
+
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            var outputFilename = Path.Combine(path, "output", "fromHtml.pdf");
+            document.Save(outputFilename);
+        }
+
+        public static void CreatePdf()
+        {
+            #region building pdf
             PdfDocument doc = new PdfDocument();
 
             doc.Info.Title = "Table example";
@@ -66,7 +86,7 @@ namespace PdfSharpCoreExample.ConsoleApp
             int rectangleHeight = 20;
 
             // page structure options
-            double lineHeight = 20;
+            //double lineHeight = 20;
             int marginLeft = 20;
             int marginTop = 20;
             double marginLeftOffset = 1.5;
@@ -86,7 +106,7 @@ namespace PdfSharpCoreExample.ConsoleApp
                 "Phone Number"
             };
 
-            for(int i = 0; i < headerColumns.Length; i++)
+            for (int i = 0; i < headerColumns.Length; i++)
             {
                 var columnMarginLeft = (marginLeft * marginLeftOffset) * (i + 1) + rectangleWidth * i;
                 var columnMarginTop = (marginTop * marginTopOffset);
@@ -120,16 +140,6 @@ namespace PdfSharpCoreExample.ConsoleApp
                     XBrushes.Black,
                     new XRect(lastNameMarginLeft, lastNameMarginTop, rectangleWidth, rectangleHeight),
                     format);
-            }
-
-            double CalcDrawStringMarginLeft()
-            {
-                return (marginLeft * marginLeftOffset);
-            }
-
-            double CalcDrawStringMarginTop()
-            {
-                return (marginLeft * marginLeftOffset);
             }
 
             //tf.DrawString("Id", fontParagraph, XBrushes.White,
@@ -179,6 +189,10 @@ namespace PdfSharpCoreExample.ConsoleApp
             //        format);
             //}
 
+            #endregion
+
+            #region security
+
             PdfSecuritySettings securitySettings = doc.SecuritySettings;
 
             // Setting one of the passwords automatically sets the security level to
@@ -198,6 +212,8 @@ namespace PdfSharpCoreExample.ConsoleApp
             securitySettings.PermitFullQualityPrint = false;
             securitySettings.PermitModifyDocument = true;
             securitySettings.PermitPrint = false;
+
+            #endregion
 
             string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
             var outputFilename = Path.Combine(path, "output", "test1.pdf");
