@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronPDFExample.ConsoleApp",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IronPDFExample.Mvc", "IronPDFExample.Mvc\IronPDFExample.Mvc.csproj", "{794B1470-F865-4659-A55F-2A39F2C7AF61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfSharpCoreExample.ConsoleApp", "PdfSharpCoreExample.ConsoleApp\PdfSharpCoreExample.ConsoleApp.csproj", "{DB266552-DF31-4991-906C-8216106E5BA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PdfSharpCoreExample.ConsoleApp", "PdfSharpCoreExample.ConsoleApp\PdfSharpCoreExample.ConsoleApp.csproj", "{DB266552-DF31-4991-906C-8216106E5BA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicPDF.Core.SuiteExample.ConsoleApp", "DynamicPDF.Core.SuiteExample.ConsoleApp\DynamicPDF.Core.SuiteExample.ConsoleApp.csproj", "{B0AB17A9-80E9-49CF-8853-BDF17E674704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicPDF.Core.SuiteExample.ConsoleApp", "DynamicPDF.Core.SuiteExample.ConsoleApp\DynamicPDF.Core.SuiteExample.ConsoleApp.csproj", "{B0AB17A9-80E9-49CF-8853-BDF17E674704}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfProvidersExamples", "PdfProvidersExamples\PdfProvidersExamples.csproj", "{8348C062-1229-4573-8995-2A9F1504C4CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B0AB17A9-80E9-49CF-8853-BDF17E674704}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0AB17A9-80E9-49CF-8853-BDF17E674704}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0AB17A9-80E9-49CF-8853-BDF17E674704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8348C062-1229-4573-8995-2A9F1504C4CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8348C062-1229-4573-8995-2A9F1504C4CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8348C062-1229-4573-8995-2A9F1504C4CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8348C062-1229-4573-8995-2A9F1504C4CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

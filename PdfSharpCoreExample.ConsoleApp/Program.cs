@@ -18,6 +18,7 @@ namespace PdfSharpCoreExample.ConsoleApp
             CreatePdfFromHtml();
         }
 
+        // used Polybioz.HtmlRenderer.PdfSharp.Core
         public static void CreatePdfFromHtml()
         {
             var document = new PdfDocument();
@@ -29,6 +30,7 @@ namespace PdfSharpCoreExample.ConsoleApp
             document.Save(outputFilename);
         }
 
+        // used just PdfSharpCore
         public static void CreatePdf()
         {
             #region building pdf

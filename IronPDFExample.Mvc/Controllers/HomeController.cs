@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 
 namespace IronPDFExample.Mvc.Controllers
 {
@@ -32,7 +33,7 @@ namespace IronPDFExample.Mvc.Controllers
 
         public IActionResult Pdf()
         {
-            IronPdf.Installation.TempFolderPath = $@"{Program.csprojPath}/IronPDFExample.Mvc/Views/Home";
+            IronPdf.Installation.TempFolderPath = $@"{Program.csprojPath}/IronPDFExample.Mvce";
             //IronPdf.Installation.LinuxAndDockerDependenciesAutoConfig = true;
             var people = new List<Person> {
                 new Person
@@ -52,7 +53,7 @@ namespace IronPDFExample.Mvc.Controllers
 
         public IActionResult PdfPass()
         {
-            IronPdf.Installation.TempFolderPath = $@"{Program.csprojPath}/IronPDFExample.Mvc/Views/Home";
+            IronPdf.Installation.TempFolderPath = $@"{Program.csprojPath}/IronPDFExample.Mvce";
             //IronPdf.Installation.LinuxAndDockerDependenciesAutoConfig = true;
             var people = new List<Person> {
                 new Person
@@ -73,7 +74,7 @@ namespace IronPDFExample.Mvc.Controllers
 
         public IActionResult PdfSave()
         {
-            IronPdf.Installation.TempFolderPath = $@"{Program.csprojPath}/IronPDFExample.Mvc/Views/Home";
+            IronPdf.Installation.TempFolderPath = $@"{Program.csprojPath}/IronPDFExample.Mvce";
             //IronPdf.Installation.LinuxAndDockerDependenciesAutoConfig = true;
             var people = new List<Person> {
                 new Person
@@ -94,7 +95,7 @@ namespace IronPDFExample.Mvc.Controllers
 
         public IActionResult PdfPassSave()
         {
-            IronPdf.Installation.TempFolderPath = $@"{Program.csprojPath}/IronPDFExample.Mvc/Views/Home";
+            IronPdf.Installation.TempFolderPath = $@"{Program.csprojPath}/IronPDFExample.Mvce";
             //IronPdf.Installation.LinuxAndDockerDependenciesAutoConfig = true;
             var people = new List<Person> {
                 new Person

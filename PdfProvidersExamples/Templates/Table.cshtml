@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+</head>
+<body>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        h1 {
+            color: green;
+            margin-left: 100px;
+        }
+    </style>
+
+    <h1>Table</h1>
+    <table>
+        <tr>
+            <th>№</th>
+            <th>LastName</th>
+            <th>FirstName</th>
+            <th>MiddleName</th>
+            <th>Phone number</th>
+        </tr>
+        @{
+            @foreach (var item in @Model)
+            {
+                <tr>
+                    <th>@item.Id</th>
+                    <th>@item.LastName</th>
+                    <th>@item.FirstName</th>
+                    <th>@item.MiddleName</th>
+                    <th>@item.PhoneNumber</th>
+                </tr>
+            }
+            @*@for (int i = 0; i < @Model.Count(); i++)
+            {
+                @if (i % 2 == 0)
+                {
+                    <tr style="background-color: aqua;">
+                        <th>@Model[i].Id</th>
+                        <th>@Model[i].LastName</th>
+                        <th>@Model[i].FirstName</th>
+                        <th>@Model[i].MiddleName</th>
+                        <th>@Model[i].PhoneNumber</th>
+                    </tr>
+                }
+                else
+                {
+                    <tr style="background-color: aqua;">
+                        <th>@Model[i].Id</th>
+                        <th>@Model[i].LastName</th>
+                        <th>@Model[i].FirstName</th>
+                        <th>@Model[i].MiddleName</th>
+                        <th>@Model[i].PhoneNumber</th>
+                    </tr>
+                }
+            }*@
+        }
+    </table>
+</body>
+</html>

@@ -1,13 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using System.IO;
+using Microsoft.Extensions.Logging;
 
-namespace IronPDFExample.Mvc
+namespace PdfProvidersExamples
 {
     public class Program
     {
-        public static string csprojPath = Directory.GetParent(Directory.GetCurrentDirectory()).FullName;
-
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
